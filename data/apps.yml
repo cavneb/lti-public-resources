@@ -1,0 +1,35 @@
+youtube:
+  name: YouTube
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  tool_id: youtube
+  tool_type: search
+  icon_path: /assets/images/youtube_icon.png
+  image_url: /assets/images/youtube_banner.png
+vimeo:
+  name: Vimeo
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  tool_id: vimeo
+  tool_type: search
+  icon_path: /assets/images/vimeo_icon.png
+  image_url: /assets/images/vimeo_banner.png
+schooltube:
+  name: SchoolTube
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  tool_id: schooltube
+  tool_type: search
+  icon_path: /assets/images/schooltube_icon.png
+  image_url: /assets/images/schooltube_banner.png
+khan_academy:
+  name: Khan Academy
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  tool_id: khan_academy
+  tool_type: browse
+  icon_path: /assets/images/khan_academy_icon.png
+  image_url: /assets/images/khan_academy_banner.png
+quizlet:
+  name: Quizlet
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  tool_id: quizlet
+  tool_type: search
+  icon_path: /assets/images/quizlet_icon.png
+  image_url: /assets/images/quizlet_banner.png
