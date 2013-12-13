@@ -1,4 +1,4 @@
-import LtiApp from 'appkit/libs/lti_app';
+import LtiApp from 'appkit/libs/lti-app';
 
 var LtiAppsRoute = Ember.Route.extend({
   model: function(params) {

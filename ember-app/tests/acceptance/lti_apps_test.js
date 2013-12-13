@@ -69,7 +69,7 @@ test('ltiApps renders', function(){
   expect(2);
   visit('/').then(function(){
     var list = find('ul li h4 a');
-    equal(list.length, 2);
+    equal(list.length, 5);
     equal(list.text(), 'YouTubeVimeoSchoolTubeKhan AcademyQuizlet');
   });
 });

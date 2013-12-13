@@ -14,6 +14,7 @@ module.exports = function(config) {
       'vendor/ember-data/ember-data.js',
       'vendor/ic-ajax/main.js',
       'vendor/lodash/dist/lodash.min.js',
+      'vendor/spin/index.js',
       'tmp/result/assets/templates.js',
       'tmp/result/assets/app.js',
       'tmp/transpiled/tests/**/*.js',
