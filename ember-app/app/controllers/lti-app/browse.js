@@ -29,14 +29,20 @@ var LtiAppBrowseController = Ember.ObjectController.extend({
   }.property('folderChain'),
 
   loadData: function() {
+    this.set('isLoaded', false);
     var browsable = Browsable.findFolder(
       this.get('ltiApp.toolId'),
       this.get('currentFolder'),
       this.get('parentFolderChain')
     );
+    this.set('isLoaded', true);
     this.set('folders', browsable.get('folders'));
     this.set('items', browsable.get('items'));
   }.observes('folderChain'),
+
+  isEmptyResults: function() {
+    return (Em.isEmpty(this.get('items')) && Em.isEmpty(this.get('folders')));
+  }.property('items.@each', 'folders.@each'),
 
   actions: {
     goToFolder: function(folder) {

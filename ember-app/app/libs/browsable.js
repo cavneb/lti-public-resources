@@ -70,6 +70,8 @@ Browsable.reopenClass({
             Em.debug('UNKNOWN KIND: ' + item.kind);
         }
       });
+    }, function(err) {
+      Ember.debug('Error: ' + err);
     });
     return browsable;
   }

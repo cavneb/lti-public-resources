@@ -21,4 +21,4 @@ Folder.reopenClass({
   }
 });
 
-export default ResponseType;
+export default Folder;
