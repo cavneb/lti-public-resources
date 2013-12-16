@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require 'active_public_resources'
 require 'ims/lti'
-require 'pry'
 
 module LtiPublicResources
   class ApiApp < Sinatra::Base

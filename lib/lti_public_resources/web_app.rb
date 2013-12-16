@@ -1,5 +1,4 @@
 require 'rack'
-require 'pry'
 
 module LtiPublicResources
   class WebApp
