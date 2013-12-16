@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = LtiPublicResources::VERSION
   spec.authors       = ["Eric Berry"]
   spec.email         = ["cavneb@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Hello}
+  spec.summary       = %q{Hello}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "sinatra"
-  spec.add_dependency "active_public_resources", "~> 0.0.4"
+  spec.add_dependency "active_public_resources", "~> 0.0.5"
   spec.add_dependency "ims-lti"
 
   spec.add_development_dependency "bundler", "~> 1.3"
