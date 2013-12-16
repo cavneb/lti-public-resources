@@ -1,4 +1,5 @@
 require 'rack'
+require 'pry'
 
 module LtiPublicResources
   class WebApp
@@ -12,7 +13,7 @@ module LtiPublicResources
             :root => root
 
           run lambda { |env|
-            [ 200, { 'Content-Type'  => 'text/html',  'Cache-Control' => 'public, max-age=86400' },
+            [ 200, { 'Content-Type' => 'text/html', 'Cache-Control' => 'public, max-age=86400' }, 
               File.open("#{root}/index.html", File::RDONLY) ]
           }
         end
@@ -24,7 +25,23 @@ module LtiPublicResources
     end
 
     def call(env)
-      @app.call(env)
+      req = Rack::Request.new(env)
+      launch_params = req.params
+
+      status, headers, response = @app.call(env)
+
+      response_body = ""
+      response.each { |part| response_body += part }
+
+      env_data = {}
+      env_data['CONFIG'] = { host: '' }
+      env_data['TOOL_ID'] = launch_params['tool_id'] || ''
+      env_data['LAUNCH_PARAMS'] = launch_params
+
+      script = "<script>window.ENV = #{env_data.to_json};</script>"
+      mod_response_body = response_body.gsub('DIST_ENV', script)
+
+      [status, headers, [mod_response_body]]
     end
 
   end

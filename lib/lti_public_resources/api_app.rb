@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'active_public_resources'
 require 'ims/lti'
+require 'pry'
 
 module LtiPublicResources
   class ApiApp < Sinatra::Base
@@ -99,7 +100,7 @@ module LtiPublicResources
         description = lti_app[:description]
         icon = "#{host}#{lti_app[:icon_path]}"
         text = lti_app[:name]
-        url = host + "/app/" + tool_id
+        url = host + "/?tool_id=" + tool_id
       else
         name = "Public Resources"
         description = "Collection of public resources"

@@ -7,9 +7,10 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
   <!-- build:css(tmp/result) assets/app.min.css -->
   <link rel="stylesheet" href="/vendor/bootstrap-flatly/index.css">
-  <link rel="stylesheet" href="/vendor/components-font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="/assets/app.css">
   <!-- endbuild -->
 
@@ -17,12 +18,10 @@
 
   <!-- @if dist=false -->
   <script>
-  window.ENV = { CONFIG: { host: 'http://localhost:9292' }};
+  window.ENV = { CONFIG: { host: 'http://localhost:9292' }, TOOL_ID: 'youtube' };
   </script>
   <!-- @endif --><!-- @if dist=true -->
-  <script>
-  window.ENV = { CONFIG: { host: '' }};
-  </script>
+  DIST_ENV
   <!-- @endif -->
 
   <!-- build:js(tmp/result) assets/vendor.min.js -->

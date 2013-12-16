@@ -10,8 +10,7 @@ var Jsonable = Ember.Mixin.create({
         ret.push(key);
       }
     }
-        
-    this.getProperties.apply(this, ret);
+    return this.getProperties.apply(this, ret);
   }
 });
 
